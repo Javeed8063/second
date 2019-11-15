@@ -1,0 +1,32 @@
+<html>
+<body>
+<form action="/save/" method="post">
+    {% csrf_token %}
+    <table align="center" cellspacing="0" border="1">
+        <tr>
+            <th colspan="2">Full Name</th>
+        </tr>
+        <tr>
+            <td>
+                First Name:<input type="text" required name="firstname">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Last  Name:<input type="text" required name="lastname">
+            </td>
+        </tr>
+        <tr>
+           <th colspan="2"> <button type="submit">show</button></th>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                {% if name %}
+                    {{ name }}
+                {% endif %}
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
